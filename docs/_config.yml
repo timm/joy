@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: 'JOY (version 1.0)'
-logo: /assets/img/logo.jpg 
+logo: /assets/img/logo.png 
 description: |
    Data mining and optimization: refactored (reasonably).
   
