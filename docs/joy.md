@@ -7,7 +7,6 @@ title: joy.lua
 # joy.lua
 ## System defaults 
 ```lua
-## System defaults 
 
 local function joy0() return {
   a=   {b= 0},

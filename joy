@@ -16,7 +16,7 @@ doc() {
   sub(/^#!class /,"") { print "<img src=\"http://yuml.me/diagram/plain;dir:lr/class/"$0"\">"; next}
   sub(/^--\[\[/,"")   { if(CODE) print "```"; CODE=0; next }
   sub(/^--\]\]/,"")   { CODE=1; print "```lua" ; next }
-  sub(/^-- /,"")     { if(CODE) print "```"; print $0; print "```lua"; CODE=1}
+  sub(/^-- /,"")     { if(CODE) print "```"; print $0; print "```lua"; CODE=1; next}
   BEGIN               { print  "---\ntitle: " name "\n---\n\n"top "\n\n# " name }
                       { print }
   END                 { if (CODE) print "```";  } '

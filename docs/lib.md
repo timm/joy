@@ -7,17 +7,14 @@ title: lib.lua
 # lib.lua
 ##  Standard library functions
 ```lua
-##  Standard library functions
 require "joy"
 
 ```
 ## inc 
 ```lua
-## inc 
 ```
 Add one to counter `i` in `a`. If counter missing, initialize it with `a[i]=1`
 ```lua
-Add one to counter `i` in `a`. If counter missing, initialize it with `a[i]=1`
 function inc(a,i,    new) 
   new  = (a[i] or 0) + 1 
   a[i] = new
