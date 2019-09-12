@@ -44,7 +44,7 @@ toc() {
           f=$(basename $i)
  	   g=${f%.*}
     	  echo "- [$g]($f): " ; 
-          grep "^-- ##" $i  | head -1 | sed 's/^##//'
+          grep "^-- ##" $i  | head -1 | sed 's/^-- ##//'
         fi 
    done
    echo ""

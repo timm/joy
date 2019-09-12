@@ -1,7 +1,8 @@
 #!/usr/bin/env lua
 -- vim: ts=2 sw=2 sts=2  et :
 
-local Abcd=require "Abcd"
+local Abcd=require("Abcd")
+local ok=require("lib").ok
 
 ok{go=function( a,y,n,m)
   a= Abcd.new{data="kk"}

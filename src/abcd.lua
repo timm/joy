@@ -30,7 +30,9 @@ After all that,  `AbcdReport` would print:
 ```
 
 --]]
-require "joy"
+L=require "lib"
+isa=L.isa
+
 local Abcd={ako="Abcd"}
 
 function Abcd.new(o)
