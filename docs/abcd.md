@@ -35,7 +35,6 @@ After all that,  `AbcdReport` would print:
 ```lua
 
 require "lib"
-
 local Abcd={ako="Abcd"}
 
 function Abcd.new(o)

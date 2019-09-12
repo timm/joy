@@ -5,15 +5,19 @@ title: lib.lua
 
 
 # lib.lua
-
-# Never seen it brighter 
-
-aaaj how about those 
-
+##  Standard library functions
 ```lua
+##  Standard library functions
+require "joy"
 
-require "the"
-
+```
+## inc 
+```lua
+## inc 
+```
+Add one to counter `i` in `a`. If counter missing, initialize it with `a[i]=1`
+```lua
+Add one to counter `i` in `a`. If counter missing, initialize it with `a[i]=1`
 function inc(a,i,    new) 
   new  = (a[i] or 0) + 1 
   a[i] = new
@@ -81,7 +85,7 @@ function copy(t,f, out)
 end
 
 function deepCopy(t)  
-  return type(t) ~= 'table' and t or copy(t,deepCopy)
+  return type(t) == 'table' and copy(t,deepCopy) or t
 end
 
 function cols(t,     numfmt, sfmt,noline,w,txt,sep)

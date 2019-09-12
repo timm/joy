@@ -32,7 +32,6 @@ After all that,  `AbcdReport` would print:
 --]]
 
 require "lib"
-
 local Abcd={ako="Abcd"}
 
 function Abcd.new(o)
