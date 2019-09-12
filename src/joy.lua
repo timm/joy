@@ -1,9 +1,7 @@
 #!/usr/bin/env lua
 -- vim: ts=2 sw=2 sts=2  et :
 
---[[
-## System defaults 
---]]
+-- ## System defaults 
 
 local function joy0() return {
   a=   {b= 0},
