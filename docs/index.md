@@ -1,9 +1,16 @@
+---
+title: Contents
+---
 
-# hello
+## Stuff to bring you joy
 
-rock and roll $$p_i = \sum_j a_i/p_i$$ asdas
-asdas
-asd
-as
+- [abcd](abcd.md): 
+ Compute classifier  performance measures
+- [index](index.md): 
+ Stuff to bring you joy
+- [lib](lib.md): 
+ System stuff
+- [the](the.md): 
 
-$$a > 2$$.
+---
+
