@@ -5,7 +5,8 @@ title: abcdok.lua
 
 
 # abcdok.lua
-local Abcd=require "Abcd"
+local Abcd=require("Abcd")
+local ok=require("lib").ok
 
 ok{go=function( a,y,n,m)
   a= Abcd.new{data="kk"}

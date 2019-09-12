@@ -33,7 +33,9 @@ After all that,  `AbcdReport` would print:
 ```
 
 ```lua
-require "joy"
+L=require "lib"
+isa=L.isa
+
 local Abcd={ako="Abcd"}
 
 function Abcd.new(o)
