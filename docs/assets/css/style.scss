@@ -8,3 +8,30 @@ a:link { color: rgb(255,72,0); }
 a:visited { color: rgb(255,72,0); }
 a:hover { color: rgb(255,72,0); }
 a:active { color: rgb(255,72,0); }
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  font-color: white;
+border-radius: 12px;
+  cursor: pointer;
+}
+
+.button a:link { color:white; text-decoration:none; font-weight:normal; }
+.button a:visited { color: white; text-decoration:none; font-weight:normal; }
+.button a:hover { color: white; text-decoration:underline; font-weight:normal; }
+.button a:active { color: white; text-decoration:none; font-weight:normal; }
+
+.button1 { background-color: rgb(255,72,0); } /* Gray */ 
+.button2 { background-color: rgb(246,211, 56);  } /* Blue */
+.button3 { background-color: rgb(33,110,185);  } /* Red */ 
+.button5  {background-color: #555555;} /* Black */
+
