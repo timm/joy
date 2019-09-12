@@ -30,8 +30,7 @@ After all that,  `AbcdReport` would print:
 ```
 
 --]]
-L=require "lib"
-isa=L.isa
+isa=require("lib").isa
 
 local Abcd={ako="Abcd"}
 
