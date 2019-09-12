@@ -33,8 +33,7 @@ After all that,  `AbcdReport` would print:
 ```
 
 ```lua
-L=require "lib"
-isa=L.isa
+isa=require("lib").isa
 
 local Abcd={ako="Abcd"}
 
