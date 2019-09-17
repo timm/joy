@@ -6,24 +6,32 @@ local lib      = require("lib")
 local isa      = lib.isa
 local r,seed   = math.random, math.randomseed
 local pi, sqrt = math.pi, math.sqrt
-local log, cos = math.log, math.cos
+local exp, log, cos = math.exp, math.log, math.cos
 
 local Num={ako="Num"}
 
-function Num.new(o,pos,txt) 
-  o.txt = txt or ""
-  o.pos = pos or 0
-  o.n  = 0
-  o.mu = 0
-  o.sd = 0
-  o.m2 = 0
-  o.hi = -math.huge
-  o.lo =  math.huge
-  return isa(o,Num)
+function Num.nums(t,f,  n)
+  f = f or function(x) return x end
+  n = Num.new{}
+  for _,x in pairs(t) do n:add( f(x) ) end
+  return n
+end
+
+function Num.new(self,pos,txt) 
+  self.txt = txt or ""
+  self.pos = pos or 0
+  self.w   = 1
+  self.n   = 0
+  self.mu  = 0
+  self.sd  = 0
+  self.m2  = 0
+  self.hi  = -math.huge
+  self.lo  =  math.huge
+  return isa(self,Num)
 end
 
 function Num:add(x,    d) 
-  if x == joy.sym.skip then return x end
+  if x == joy.char.skip then return x end
   x = tonumber(x)
   self.n = self.n + 1
   if x < self.lo then self.lo = x end 
@@ -65,6 +73,11 @@ function Num:variety() return self.sd end
 function Num:xpect(other,   n)
   n = self.n + other.n
   return self.sd*self.n/n + other.sd*other.n/n
+end
+
+function Num:pdf(x)
+  return exp(-1*(x - self.mu)^2/(2*self.sd^2)) *
+         1 / (self.sd * ((2*pi)^0.5))
 end
 
 return Num
