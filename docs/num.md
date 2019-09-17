@@ -1,13 +1,10 @@
-#!/usr/bin/env lua
--- vim: ts=2 sw=2 sts=2  et :
-
--- adas
--- sdadsdsdas asdas
--- asdas asdas
--- asdas asdsa
--- asdas asdas
+---
+title: num.lua
+---
 
 
+
+# num.lua
 local joy      = require("joy")
 local lib      = require("lib")
 local isa      = lib.isa
@@ -24,10 +21,10 @@ function Num.nums(t,f,  n)
   return n
 end
 
-function Num.new(self)
-  self.txt = self.txt or ""
-  self.pos = self.pos or 0
-  self.w   = self.w or 1
+function Num.new(self,pos,txt) 
+  self.txt = txt or ""
+  self.pos = pos or 0
+  self.w   = 1
   self.n   = 0
   self.mu  = 0
   self.sd  = 0
@@ -46,7 +43,7 @@ function Num:add(x,    d)
   d       = x - self.mu
   self.mu = self.mu + d/self.n
   self.m2 = self.m2 + d*(x - self.mu)
-  self.sd = self:sd0()
+  i.sd = self:sd0()
   return x
 end
 

@@ -1,7 +1,21 @@
 #!/usr/bin/env lua
--- vim: ts=2 sw=2 sts=2  et :
+-- vim: ft=lua ts=2 sw=2 sts=2  et  formatoptions+=or  : 
 
 -- ##  Standard library functions
+--  asdas
+-- adas
+--
+--  asd asdas adas
+-- adas
+--  ada
+
+
+
+
+
+
+
+
 local joy=require "joy"
 local lib={}
 
