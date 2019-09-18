@@ -20,28 +20,29 @@ function Rows.new(self)
 end
 
 function Rows:header(cells,       c,w,what,tmp,indep)
-  local function at(a,x) 
-    self.cols[a][#self.cols[a] + 1] = x end
-  self = self or Rows.new()
   for c0,x in pairs(cells) do
     if not x:match("%?")  then
       c = #t._use+1
-      if x:match("!") then self.cols.class = c end
       t._use[c] = c0
       t.name[c] = x
       t.eman[x] = c
-      w    = x:match("<") and -1 or 1
-      what = x:match("[<>%$]") and Num or Sym
-      tmp  = what.new{w=w, txt=x, pos=c}
-      indep= not x:match("[<>!]]") 
-      at("all", tmp)
-      if what==Num then
-        at("nums", tmp)
-        if indep then at("xnums", tmp) end
-      else
-        at("syms", tmp)
-        if indep then at("xsyms", tmp)  end 
-  end end end
+      self:header1(x,c, 
+                  {w      = x:match("<") and -1 or 1,
+                   nump   = x:match("[<>%$]"),
+                   indep  = not x:match("[<>!]]"),
+                   klassp = x:match("!")}) end end 
 end
 
-return Rows
+function Rows:header1(x,c,is,      klass,tmp,at)
+  klass = is.nump and Num or Sym
+  tmp   = what.new{w= is.w, txt=x, pos=c}
+  at    = function(a) self.cols[a][#self.cols[a] + 1] = tmp end
+  at("all")
+  at(is.nump and "nums" or "syms")
+  if is.indep then
+    at(is.nump and "xnums" or "xsyms") end
+  if is.klassp then at("klass") end
+end
+
+
+i ../etc/.vimrc
