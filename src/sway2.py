@@ -34,17 +34,17 @@ class Num(Thing):
 
 class Model():
   def init(i):
-    i.xs,i.ys= i.about()
+    i.xs,i.ys= i.things()
   def __call__(i): 
     i.x = [f() for f in i.xs]
     i.y = [f() for f in i.ys]
   def distance(i,j):
-    return sum( [ f.dist(a,b)**2 for a,b,f  in
+    return sum( [ thing.dist(a,b)**2 for a,b,thing  in
                   zip(i.x, j.x, i.xs) ] 
               ) / length(i.x)
 
 class Model1(Model):
-  def about(i):
+  def things(i):
     return [num(2,8,10), num(3,4,8), sym(True, False)],[nil(), nil()]
 
 def pole(model,some,peeks):
