@@ -33,7 +33,9 @@ classI -- classJ : Link(Solid)
 classK ..> classL : Dependency
 classM ..|> classN : Realization
 classO .. classP : Link(Dashed)
+```
 
+```mermaid
 gantt
     dateFormat  YYYY-MM-DD
     title       Adding GANTT diagram functionality to mermaid
